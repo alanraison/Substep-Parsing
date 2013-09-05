@@ -7,7 +7,6 @@ Scenario: A simple scenario name
 Given I think
 Then I am
 
-Tags: remove
-Scenario: Another scenario
+Scenario: Scenario with no tags
 Given I have no tags
 Then I should have none

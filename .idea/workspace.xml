@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_10_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scala-parser.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/ProblemParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/ProblemParser.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/problem.file" afterPath="$PROJECT_DIR$/src/test/resources/problem.file" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/AbstractParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/AbstractParser.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileParser.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/simple.feature" afterPath="$PROJECT_DIR$/src/test/resources/simple.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scala-parser.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378392847414" ignored="false" />
-    <file path="/FeatureFileParser.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375194997347" ignored="false" />
+    <file path="/Dummy.txt" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378401362358" ignored="false" />
+    <file path="/FeatureFileParser.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378403261027" ignored="false" />
     <file path="/Scenario.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375192315259" ignored="false" />
     <file path="/Substep.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375187830289" ignored="false" />
     <file path="/Feature.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375187195238" ignored="false" />
-    <file path="/simple.feature" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375193971581" ignored="false" />
+    <file path="/simple.feature" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378403225772" ignored="false" />
     <file path="/Scala Console" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375190361187" ignored="false" />
     <file path="/FeatureFileRunner.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375190447875" ignored="false" />
     <file path="/fragment.java" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378394283367" ignored="false" />
@@ -94,19 +90,73 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProblemParser.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ProblemParser.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/ProblemParser.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="460" selection-end="460" vertical-scroll-proportion="0.55314535">
+            <state line="9" column="47" selection-start="277" selection-end="290" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="problem.file" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/problem.file">
+      <file leaf-file-name="SubstepsFileParser.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/SubstepsFileParser.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0">
+            <state line="4" column="0" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FeatureFileParser.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileParser.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="simple.feature" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/simple.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="31" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Feature.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Feature.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scenario.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Scenario.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="18" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractParser.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/AbstractParser.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="29" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FeatureFileRunner.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileRunner.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="17" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -138,12 +188,12 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/SubstepFileParser.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/SubstepsFileParser.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Scenario.scala" />
-        <option value="$PROJECT_DIR$/src/test/resources/simple.feature" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileParser.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/AbstractParser.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/ProblemParserRunner.scala" />
         <option value="$PROJECT_DIR$/src/test/resources/problem.file" />
         <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/ProblemParser.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/AbstractParser.scala" />
+        <option value="$PROJECT_DIR$/src/test/resources/simple.feature" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileParser.scala" />
       </list>
     </option>
   </component>
@@ -207,7 +257,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -274,9 +323,74 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Substep-Parsing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="subteps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Substep-Parsing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="subteps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scenario.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,11 +407,11 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.ProblemParserRunner">
+  <component name="RunManager" selected="Application.FeatureFileRunner">
     <configuration default="false" name="Scala Console" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true">
       <module name="scala-parser" />
       <setting name="vmparams4" value="-Djline.terminal=NONE" />
@@ -363,19 +477,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -401,6 +502,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -444,8 +558,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.ProblemParserRunner" />
-        <item index="1" class="java.lang.String" itemvalue="Application.FeatureFileRunner" />
+        <item index="0" class="java.lang.String" itemvalue="Application.FeatureFileRunner" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ProblemParserRunner" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -491,22 +605,22 @@
       <window_info id="SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.497426" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292011" sideWeight="0.5006435" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36225894" sideWeight="0.5032175" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990867" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35199484" sideWeight="0.6707989" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2039897" sideWeight="0.637741" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967825" sideWeight="0.6707989" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292011" sideWeight="0.494852" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967825" sideWeight="0.637741" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36225894" sideWeight="0.49227798" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.497426" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -586,49 +700,14 @@
         <state line="1" column="6" selection-start="44" selection-end="44" vertical-scroll-proportion="0.029880479" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Feature.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Scenario.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="146" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0.jar!/scala/Some.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="17" selection-start="31" selection-end="31" vertical-scroll-proportion="0.029126214" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/SubstepsFileParser.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileParser.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="42" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/AbstractParser.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="363" selection-end="427" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/Substeps">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="71" selection-start="555" selection-end="575" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileRunner.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="28" selection-start="220" selection-end="220" vertical-scroll-proportion="0.21367522" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/simple.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="23" selection-start="225" selection-end="225" vertical-scroll-proportion="0.25641027" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0.jar!/scala/util/parsing/combinator/Parsers.class">
@@ -647,14 +726,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/problem.file">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0">
+        <state line="10" column="0" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/SubstepsFileParser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileRunner.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="17" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/ProblemParser.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="460" selection-end="460" vertical-scroll-proportion="0.55314535">
+        <state line="9" column="47" selection-start="277" selection-end="290" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Scenario.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="18" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Feature.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/AbstractParser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="29" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/simple.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="31" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileParser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

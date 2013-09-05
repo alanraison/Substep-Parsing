@@ -10,6 +10,6 @@ abstract class AbstractParser extends RegexParsers  {
 
   def substep: Parser[Substep] = """([^:\r\n])+""".r ^^ ((x) => Substep(x))
 
-  def eol: Parser[Any]                       = """(\r?\n)+""".r
+  def eol: Parser[Any]                       = """\r?\n""".r
 
 }

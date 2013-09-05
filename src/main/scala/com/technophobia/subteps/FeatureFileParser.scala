@@ -4,25 +4,27 @@ import com.technophobia.subteps.nodes.{Substep, Feature, Scenario}
 
 class FeatureFileParser extends AbstractParser {
 
-  def featureFile: Parser[Feature] = tagDef ~ featureDef ~ repsep(scenario, eol) ^^ {case (tags ~ featureName ~ scenarios) => Feature(featureName, tags, scenarios)}
+  def featureFile: Parser[Feature] = (tagDef <~ rep1(eol)) ~ (featureDef <~ rep1(eol)) ~ (rep(scenario) <~ rep(eol)) ^^ {
 
-  def tagDef: Parser[List[String]] = "Tags:" ~> rep(tags) <~ opt(whiteSpace) <~ eol
+    case (tags ~ featureName ~ scenarios) => Feature(featureName, tags, scenarios)
+  }
 
-  def tags: Parser[String] = opt(whiteSpace) ~> tag
+  def tagDef: Parser[List[String]] = "Tags:" ~> opt(space) ~> repsep(tag, space)
+
+  def space: Parser[Any] = """( )+""".r //TOOD Is there a predefined parser?
 
   def tag: Parser[String]   = """[1-9A-Za-z-_~]+""".r
 
-  def featureDef: Parser[String] = "Feature:" ~> opt(whiteSpace) ~> """(.)+""".r <~ eol
+  def featureDef: Parser[String] = "Feature:" ~> opt(space) ~> """[^\r\n]+""".r
 
   def scenario: Parser[Scenario] = basicScenario // | scenarioOutline
 
-  def basicScenario: Parser[Scenario] = opt(tagDef) ~ scenarioDef ~ repsep(substep, eol) ^^ {
+  def basicScenario: Parser[Scenario] = (opt(tagDef <~ eol) ~ scenarioDef <~ eol) ~ repsep(substep, eol) <~ rep(eol) ^^ {
 
     case (Some(tags) ~ scenarioName ~ substeps) => Scenario(scenarioName, tags, substeps)
     case (None ~ scenarioName ~ substeps) => Scenario(scenarioName, Nil, substeps)
   }
 
-
-  def scenarioDef: Parser[String] = "Scenario:" ~> opt(whiteSpace) ~> """.+""".r <~ eol
+  def scenarioDef: Parser[String] = "Scenario:" ~> opt(space) ~> """[^\n\r]+""".r
 
 }
