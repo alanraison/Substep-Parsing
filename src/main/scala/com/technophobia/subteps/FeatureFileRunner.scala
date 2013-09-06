@@ -8,7 +8,7 @@ object FeatureFileRunner extends FeatureFileParser {
 
     val reader = new FileReader(args(0))
 
-    val result = parseAll(featureFile, reader)  match {
+    val result = parse(reader)  match {
 
       case Success(feature, in) => feature
       case x => x.toString
