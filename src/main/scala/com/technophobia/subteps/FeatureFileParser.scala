@@ -3,9 +3,9 @@ package com.technophobia.subteps
 import com.technophobia.subteps.nodes.{ScenarioOutline, BasicScenario, Feature, Scenario}
 import java.io.Reader
 
-class FeatureFileParser extends AbstractParser {
+class FeatureFileParser extends AbstractParser[Feature] {
 
-  def parse(reader: Reader) = parseAll(featureFile, reader)
+  protected override def entryPoint = featureFile
 
   private def featureFile: Parser[Feature] = opt((tagDef <~ rep1(eol))) ~ (featureDef <~ rep1(eol)) ~ (rep(scenario) <~ rep(eol)) ^^ {
 
@@ -21,7 +21,7 @@ class FeatureFileParser extends AbstractParser {
 
   private def scenario: Parser[Scenario] = basicScenario | scenarioOutline
 
-  private def basicScenario: Parser[BasicScenario] = (opt(tagDef <~ eol) ~ scenarioDef <~ eol) ~ rep1sep(substep, eol) <~ rep(eol) ^^ {
+  private def basicScenario: Parser[BasicScenario] = (opt(tagDef <~ eol) ~ scenarioDef <~ eol) ~ rep1sep(substepUsage, eol) <~ rep(eol) ^^ {
 
     case (Some(tags) ~ scenarioName ~ substeps) => BasicScenario(scenarioName, tags, substeps)
     case (None ~ scenarioName ~ substeps) => BasicScenario(scenarioName, Nil, substeps)
@@ -29,7 +29,7 @@ class FeatureFileParser extends AbstractParser {
 
   private def scenarioDef: Parser[String] = "Scenario:" ~> opt(whiteSpace) ~> """[^\n\r]+""".r
 
-  private def scenarioOutline: Parser[ScenarioOutline] = (opt(tagDef <~ rep1(eol))) ~ (scenarioOutlineDef <~ rep1(eol)) ~ (rep1sep(substep, eol) <~ rep(eol)) ~ exampleSection <~ rep(eol) ^^ {
+  private def scenarioOutline: Parser[ScenarioOutline] = (opt(tagDef <~ rep1(eol))) ~ (scenarioOutlineDef <~ rep1(eol)) ~ (rep1sep(substepUsage, eol) <~ rep(eol)) ~ exampleSection <~ rep(eol) ^^ {
 
     case (Some(tags) ~ scenarioName ~ substeps ~ examples) => ScenarioOutline(scenarioName, tags, substeps, examples)
     case (None ~ scenarioName ~ substeps ~ examples) => ScenarioOutline(scenarioName, Nil, substeps, examples)

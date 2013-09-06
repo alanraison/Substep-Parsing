@@ -1,15 +1,21 @@
 package com.technophobia.subteps
 
 import scala.util.parsing.combinator.RegexParsers
-import com.technophobia.subteps.nodes.Substep
+import com.technophobia.subteps.nodes.{SubstepUsage, Substep}
+import java.io.Reader
+import com.technophobia.subteps.node.factory.SubstepNodeFactory
 
-abstract class AbstractParser extends RegexParsers  {
+abstract class AbstractParser[T] extends RegexParsers  {
 
   override val skipWhitespace = false
   override val whiteSpace                    = """[ \t]+""".r
 
-  def substep: Parser[Substep] = """([^:\r\n])+""".r ^^ ((x) => Substep(x))
+  def substepUsage: Parser[SubstepUsage] = """([^:\r\n])+""".r ^^ ((x) => SubstepUsage(x.trim))
 
   def eol: Parser[Any]                       = """\r?\n""".r
+
+  protected def entryPoint: Parser[T];
+
+  def parse(reader: Reader) = parseAll(entryPoint, reader)
 
 }

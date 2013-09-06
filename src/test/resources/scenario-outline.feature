@@ -6,6 +6,7 @@ Scenario Outline: A scenario that's an outline
 
 Given I think for <SECONDS>
 Then I am <TIREDNESS_LEVEL>
+So <SECONDS> means I'll be <TIREDNESS_LEVEL>
 
 Examples:
 

@@ -1,13 +1,14 @@
 package com.technophobia.subteps
 
-import java.io.{InputStreamReader, FileReader}
+
 import org.junit.{Test, Assert}
-import com.technophobia.subteps.nodes.{ScenarioOutline, Feature}
+import com.technophobia.subteps.nodes.{BasicScenario, ScenarioOutline, Feature}
+import com.technophobia.substeps.ParsingTestHelpers
 
-class FeatureFileParserTest extends FeatureFileParser {
+class FeatureFileParserTest extends FeatureFileParser with ParsingTestHelpers[Feature] {
 
-  private val SIMPLE_FEATURE_FILE = "/simple.feature"
-  private val SCENARIO_OUTLINE_FEATURE_FILE = "/scenario-outline.feature"
+  private val SIMPLE_FEATURE_FILE = "simple.feature"
+  private val SCENARIO_OUTLINE_FEATURE_FILE = "scenario-outline.feature"
 
 
   @Test
@@ -22,14 +23,14 @@ class FeatureFileParserTest extends FeatureFileParser {
     val scenario = feature.scenarios.head
 
     Assert.assertEquals("A simple scenario name", scenario.name)
-    Assert.assertEquals(List("scenarioTag-1", "scenarioTag-2"), scenario.tags)
-    Assert.assertEquals(2, scenario.steps.size)
+    Assert.assertEquals(List("scenarioTag-1", "scenarioTag-2"), scenario.asInstanceOf[BasicScenario].tags)
+    Assert.assertEquals(2, scenario.asInstanceOf[BasicScenario].steps.size)
 
-    val substep1 = scenario.steps(0)
-    val substep2 = scenario.steps(1)
+    val substep1 = scenario.asInstanceOf[BasicScenario].steps(0)
+    val substep2 = scenario.asInstanceOf[BasicScenario].steps(1)
 
-    Assert.assertEquals("Given I think", substep1.definition)
-    Assert.assertEquals("Then I am", substep2.definition)
+    Assert.assertEquals("Given I think", substep1.usageString)
+    Assert.assertEquals("Then I am", substep2.usageString)
 
   }
 
@@ -47,23 +48,31 @@ class FeatureFileParserTest extends FeatureFileParser {
     def assertScenarioOutline(scenarioOutline: ScenarioOutline) {
 
       Assert.assertEquals("A scenario that's an outline", scenarioOutline.name)
-      Assert.assertEquals(List("scenarioOutlineTag"), scenarioOutline.tags)
 
-      Assert.assertEquals(2, scenarioOutline.steps.size)
+      Assert.assertEquals(2, scenarioOutline.scenarios.size)
 
-      val substep1 = scenarioOutline.steps(0)
-      val substep2 = scenarioOutline.steps(1)
+      val firstExampleScenario = scenarioOutline.scenarios(0)
 
-      Assert.assertEquals("Given I think for <SECONDS>", substep1.definition)
-      Assert.assertEquals("Then I am <TIREDNESS_LEVEL>", substep2.definition)
+      Assert.assertEquals(List("scenarioOutlineTag"), firstExampleScenario.tags)
+      val example1substep1 = firstExampleScenario.steps(0)
+      val example1substep2 = firstExampleScenario.steps(1)
+      val example1substep3 = firstExampleScenario.steps(2)
 
-      Assert.assertEquals(2, scenarioOutline.examples.size)
+      Assert.assertEquals("Given I think for 5", example1substep1.usageString)
+      Assert.assertEquals("Then I am OK", example1substep2.usageString)
+      Assert.assertEquals("So 5 mean I'll be OK", example1substep3.usageString)
 
-      val example1 = scenarioOutline.examples(0)
-      val example2 = scenarioOutline.examples(1)
+      val secondExampleScenario = scenarioOutline.scenarios(1)
 
-      Assert.assertEquals(Map(("SECONDS" -> "5"), ("TIREDNESS_LEVEL" -> "OK")), example1)
-      Assert.assertEquals(Map(("SECONDS" -> "120"), ("TIREDNESS_LEVEL" -> "EXHAUSTED")), example2)
+      Assert.assertEquals(List("scenarioOutlineTag"), secondExampleScenario.tags)
+      val example2substep1 = secondExampleScenario.steps(0)
+      val example2substep2 = secondExampleScenario.steps(1)
+      val example2substep3 = secondExampleScenario.steps(2)
+
+      Assert.assertEquals("Given I think for 120", example2substep1.usageString)
+      Assert.assertEquals("Then I am EXHAUSTED", example2substep2.usageString)
+      Assert.assertEquals("So 120 mean I'll be EXHAUSTED", example2substep3.usageString)
+
     }
 
     scenario match {
@@ -73,36 +82,6 @@ class FeatureFileParserTest extends FeatureFileParser {
 
     }
 
-
-
-
   }
-
-  private def getSuccessfulParse(fileName: String) : Feature = {
-
-    parse(fileName) match {
-
-      case Success(feature, _) => feature
-      case x => throw new AssertionError(x.toString)
-
-    }
-
-  }
-
-  private def parse(fileName: String) = {
-
-    val reader = new InputStreamReader(classOf[FeatureFileParserTest].getResourceAsStream(fileName))
-
-    try {
-
-      new FeatureFileParser().parse(reader)
-    }
-    finally {
-
-      reader.close()
-    }
-
-  }
-
 
 }
