@@ -9,6 +9,6 @@ case class Substep(name: String) {
 
 abstract class SubstepDefinition
 
-case class SubstepFileDefinition(substepUsages: List[SubstepUsage]) extends SubstepDefinition
+case class SubstepFileDefinition(substeps: List[Substep]) extends SubstepDefinition
 
-case class SubstepImplementationDefinition(method: Method) extends SubstepDefinition
+case class SubstepImplementationDefinition(execution: ((Any*) => Any)) extends SubstepDefinition

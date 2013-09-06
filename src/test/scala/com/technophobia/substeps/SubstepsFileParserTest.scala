@@ -28,9 +28,9 @@ class SubstepsFileParserTest extends SubstepsFileParser with ParsingTestHelpers[
 
     def assertSubstepFileDefinition(substepDefinition: SubstepFileDefinition) {
 
-      Assert.assertEquals("When an event occurs", substepDefinition.substepUsages(0).usageString)
-      Assert.assertEquals("Then bad things happen", substepDefinition.substepUsages(1).usageString)
-      Assert.assertEquals("And people get upset", substepDefinition.substepUsages(2).usageString)
+      Assert.assertEquals("When an event occurs", substepDefinition.substeps(0).name)
+      Assert.assertEquals("Then bad things happen", substepDefinition.substeps(1).name)
+      Assert.assertEquals("And people get upset", substepDefinition.substeps(2).name)
     }
 
     firstSubstep.definition match {
@@ -39,6 +39,31 @@ class SubstepsFileParserTest extends SubstepsFileParser with ParsingTestHelpers[
       case x => throw new AssertionError(x.toString)
 
     }
+
+  }
+
+  @Test
+  def testSubstepsReferToOneAnother() {
+
+    val substeps = getSuccessfulParse(SUBSTEPS_FILE)
+
+    val substepMap = substeps.map{ substep => (substep.name, substep)}.toMap
+
+    val givenSomething = substepMap("Given something")
+
+    def assertSubstepDefinitionIsGivenSomething(name: String) {
+
+      val usage = substepMap(name).definition match {
+
+        case Some(x:SubstepFileDefinition) => x.substeps.head
+        case x => throw new AssertionError("Was expecting a substep file defintion but found " + x)
+
+      }
+
+      Assert.assertSame(givenSomething, usage)
+    }
+
+    List("Given a substep", "Given another substep", "Given yet another substep").foreach(assertSubstepDefinitionIsGivenSomething(_))
 
   }
 

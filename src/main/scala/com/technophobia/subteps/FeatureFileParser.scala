@@ -1,7 +1,10 @@
 package com.technophobia.subteps
 
-import com.technophobia.subteps.nodes.{ScenarioOutline, BasicScenario, Feature, Scenario}
+import com.technophobia.subteps.nodes._
 import java.io.Reader
+import com.technophobia.subteps.nodes.BasicScenario
+import com.technophobia.subteps.nodes.Feature
+import scala.Some
 
 class FeatureFileParser extends AbstractParser[Feature] {
 
@@ -26,6 +29,8 @@ class FeatureFileParser extends AbstractParser[Feature] {
     case (Some(tags) ~ scenarioName ~ substeps) => BasicScenario(scenarioName, tags, substeps)
     case (None ~ scenarioName ~ substeps) => BasicScenario(scenarioName, Nil, substeps)
   }
+
+  def substepUsage: Parser[SubstepUsage] = """([^:\r\n])+""".r ^^ ((x) => SubstepUsage(x.trim))
 
   private def scenarioDef: Parser[String] = "Scenario:" ~> opt(whiteSpace) ~> """[^\n\r]+""".r
 
