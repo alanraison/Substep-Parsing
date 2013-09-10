@@ -18,6 +18,8 @@
  */
 package com.technophobia.substeps.model.parameter;
 
+import java.util.List;
+
 /**
  * Interface for classes that convert a String into another type.
  * Designed for use when converting method parameters for @Step methods.
@@ -26,7 +28,7 @@ package com.technophobia.substeps.model.parameter;
  */
 public interface Converter<T> {
 
-	boolean canConvert(Class<?> cls);
+	Class<T> converts();
 
 	T convert(String value);
 

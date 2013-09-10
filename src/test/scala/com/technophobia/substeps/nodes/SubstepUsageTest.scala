@@ -72,6 +72,8 @@ class SubstepUsageTest {
     Assert.assertEquals(expected, resolved)
   }
 
+  def aMethodIHaveImplemented() {}
+
   @Test
   def testResolveStepImplementation() {
 
