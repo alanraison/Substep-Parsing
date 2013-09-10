@@ -1,4 +1,4 @@
-package com.technophobia.subteps
+package com.technophobia.substeps
 
 object StepImplementationClassCache {
 

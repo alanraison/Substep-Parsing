@@ -1,9 +1,9 @@
-package com.technophobia.subteps
+package com.technophobia.substeps
 
 import scala.util.parsing.combinator.RegexParsers
-import com.technophobia.subteps.nodes.{SubstepUsage, Substep}
+import com.technophobia.substeps.nodes.{SubstepUsage, Substep}
 import java.io.Reader
-import com.technophobia.subteps.node.factory.SubstepNodeFactory
+import com.technophobia.substeps.node.factory.SubstepNodeFactory
 
 abstract class AbstractParser[T] extends RegexParsers  {
 

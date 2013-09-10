@@ -1,9 +1,8 @@
-package com.technophobia.subteps
+package com.technophobia.substeps
 
 
 import org.junit.{Test, Assert}
-import com.technophobia.subteps.nodes.{BasicScenario, ScenarioOutline, Feature}
-import com.technophobia.substeps.ParsingTestHelpers
+import com.technophobia.substeps.nodes.{BasicScenario, ScenarioOutline, Feature}
 
 class FeatureFileParserTest extends FeatureFileParser with ParsingTestHelpers[Feature] {
 
@@ -60,7 +59,7 @@ class FeatureFileParserTest extends FeatureFileParser with ParsingTestHelpers[Fe
 
       Assert.assertEquals("Given I think for 5", example1substep1.usageString)
       Assert.assertEquals("Then I am OK", example1substep2.usageString)
-      Assert.assertEquals("So 5 mean I'll be OK", example1substep3.usageString)
+      Assert.assertEquals("So 5 means I'll be OK", example1substep3.usageString)
 
       val secondExampleScenario = scenarioOutline.scenarios(1)
 
@@ -71,7 +70,7 @@ class FeatureFileParserTest extends FeatureFileParser with ParsingTestHelpers[Fe
 
       Assert.assertEquals("Given I think for 120", example2substep1.usageString)
       Assert.assertEquals("Then I am EXHAUSTED", example2substep2.usageString)
-      Assert.assertEquals("So 120 mean I'll be EXHAUSTED", example2substep3.usageString)
+      Assert.assertEquals("So 120 means I'll be EXHAUSTED", example2substep3.usageString)
 
     }
 

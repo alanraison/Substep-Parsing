@@ -2,27 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/AbstractParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/AbstractParser.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileParser.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/simple.feature" afterPath="$PROJECT_DIR$/src/test/resources/simple.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/Feature.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/RunResult.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/StepImplementationLoader.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/StepImplementationLoaderTest.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/TagMatcher.scala" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/ProblemParser.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/ProblemParserRunner.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/StepImplementationLoader.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Feature.scala" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/AbstractParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/AbstractParser.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/FeatureFileParser.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileRunner.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/FeatureFileRunner.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/StepImplementationClassCache.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/StepImplementationClassCache.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/Substeps" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/Substeps" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/SubstepsFileParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/SubstepsFileParser.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/node/factory/SubstepNodeFactory.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/node/factory/SubstepNodeFactory.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Scenario.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/Scenario.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Substep.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/Substep.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/SubstepUsage.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/SubstepUsage.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/runner/SubstepsRunner.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/runner/SubstepsRunner.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/implementations/DummySteps.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/implementations/DummySteps.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/FeatureFileParserTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/FeatureFileParserTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/ParsingTestHelpers.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/ParsingTestHelpers.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/SubstepsFileParserTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/SubstepsFileParserTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scala-parser.iml" afterPath="$PROJECT_DIR$/scala-parser.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="scala-parser.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378401362358" ignored="false" />
-    <file path="/FeatureFileParser.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378403261027" ignored="false" />
-    <file path="/Scenario.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375192315259" ignored="false" />
-    <file path="/Substep.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375187830289" ignored="false" />
-    <file path="/Feature.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375187195238" ignored="false" />
-    <file path="/simple.feature" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378403225772" ignored="false" />
+    <file path="/Dummy.txt" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378823481480" ignored="false" />
+    <file path="/FeatureFileParser.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378467665539" ignored="false" />
+    <file path="/Scenario.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378816691862" ignored="false" />
+    <file path="/Substep.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378831195183" ignored="false" />
+    <file path="/Feature.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378816675911" ignored="false" />
+    <file path="/simple.feature" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378457482696" ignored="false" />
     <file path="/Scala Console" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375190361187" ignored="false" />
-    <file path="/FeatureFileRunner.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375190447875" ignored="false" />
-    <file path="/fragment.java" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378394283367" ignored="false" />
-    <file path="/AbstractParser.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375194396842" ignored="false" />
+    <file path="/FeatureFileRunner.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378457110075" ignored="false" />
+    <file path="/fragment.java" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378810140632" ignored="false" />
+    <file path="/AbstractParser.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378482839742" ignored="false" />
     <file path="/SubstepFileParser.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375192271056" ignored="false" />
     <file path="/ProblemParser.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378397389816" ignored="false" />
     <file path="/ProblemParserRunner.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1375195430277" ignored="false" />
     <file path="/problem.file" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378397017599" ignored="false" />
+    <file path="/FeatureFileParserTest.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378800674139" ignored="false" />
+    <file path="/pom.xml" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378802277183" ignored="false" />
+    <file path="/scenario-outline.feature" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378478622932" ignored="false" />
+    <file path="/SubstepsFileParserTest.java" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378466796023" ignored="false" />
+    <file path="/SubstepsFileParserTest.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378817429458" ignored="false" />
+    <file path="/ParsingTestHelpers.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378468024959" ignored="false" />
+    <file path="/SubstepsFileParser.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378817307389" ignored="false" />
+    <file path="/SubstepNodeFactory.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378831405022" ignored="false" />
+    <file path="/simple.substeps" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378473928995" ignored="false" />
+    <file path="/SubstepUsage.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378831319214" ignored="false" />
+    <file path="/DummySteps.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378801663635" ignored="false" />
+    <file path="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/package.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378480633287" ignored="false" />
+    <file path="/SubstepsRunner.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378801741539" ignored="false" />
+    <file path="/StepImplementationLoader.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378829422729" ignored="false" />
+    <file path="/StepImplementationClassCache.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378482481418" ignored="false" />
+    <file path="/StepImplementationLoaderTest.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378801478739" ignored="false" />
+    <file path="/MoreDummySteps.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378800838408" ignored="false" />
+    <file path="/Dummy.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378826019583" ignored="false" />
+    <file path="/TagMatcher.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378801873009" ignored="false" />
+    <file path="/FeatureTest.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378817133878" ignored="false" />
+    <file path="/a.dummy" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378823565596" ignored="false" />
+    <file path="/ScenarioOutlineTest.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378817223764" ignored="false" />
+    <file path="/BasicScenarioTest.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378816996038" ignored="false" />
+    <file path="/RunResult.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378816791173" ignored="false" />
+    <file path="/Temp.java" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378810316526" ignored="false" />
+    <file path="$PROJECT_DIR$/../Substeps-Core/pom.xml" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378823481794" ignored="false" />
+    <file path="/SubstepUsageTest.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378830577234" ignored="false" />
+    <file path="/ImplementationSubstepUsageTest.scala" changelist="cf50cefb-e1bd-4939-8af0-1e5e7c8ae0da" time="1378832278104" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +84,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="false" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -37,7 +94,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -45,6 +101,7 @@
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
@@ -61,6 +118,7 @@
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
@@ -72,6 +130,39 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/nodes/SubstepUsageTest.scala" line="81" class="com.technophobia.substeps.nodes.SubstepUsageTest" package="com.technophobia.substeps.nodes">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/nodes/ImplementationSubstepUsageTest.scala" line="55" class="com.technophobia.substeps.nodes.ImplementationSubstepUsageTest" package="com.technophobia.substeps.nodes">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -81,83 +172,108 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProblemParserRunner.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/ProblemParserRunner.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="19" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProblemParser.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/ProblemParser.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="47" selection-start="277" selection-end="290" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubstepsFileParser.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/SubstepsFileParser.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FeatureFileParser.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileParser.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="simple.feature" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/simple.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="31" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Feature.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Feature.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Scenario.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Scenario.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/Scenario.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="18" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+            <state line="13" column="79" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#41#97#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubstepUsage.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/SubstepUsage.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="3" selection-start="2612" selection-end="2612" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#41#100#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatchResult.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/jdk1.7.0_10/src.zip!/java/util/regex/MatchResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="17" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#6388#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Substep.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/Substep.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#41#73#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Regex.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.10.0/scala-library-2.10.0-sources.jar!/scala/util/matching/Regex.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="202" column="67" selection-start="8751" selection-end="8751" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractParser.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/AbstractParser.scala">
+      <file leaf-file-name="SubstepUsageTest.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/nodes/SubstepUsageTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="29" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
+            <state line="90" column="0" selection-start="3248" selection-end="3248" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#41#80#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImplementationSubstepUsageTest.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/nodes/ImplementationSubstepUsageTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="0" selection-start="1937" selection-end="1937" vertical-scroll-proportion="0.6462264">
+              <folding>
+                <element signature="e#41#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Class.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/jdk1.7.0_10/src.zip!/java/lang/Class.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1613" column="18" selection-start="67863" selection-end="67863" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FeatureFileRunner.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileRunner.scala">
+      <file leaf-file-name="SubstepNodeFactory.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/node/factory/SubstepNodeFactory.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="17" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="39" column="0" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#48#146#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StepImplementationLoader.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/StepImplementationLoader.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="891" selection-end="891" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#35#110#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -180,20 +296,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/parser/Substeps.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Feature.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/Substeps.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Substep.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileRunner.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/SubstepFileParser.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/SubstepsFileParser.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Scenario.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/ProblemParserRunner.scala" />
-        <option value="$PROJECT_DIR$/src/test/resources/problem.file" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/ProblemParser.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/AbstractParser.scala" />
-        <option value="$PROJECT_DIR$/src/test/resources/simple.feature" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileParser.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/FeatureFileParser.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/Temp.java" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/Feature.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/Scenario.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/RunResult.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/nodes/BasicScenarioTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/nodes/FeatureTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/nodes/ScenarioOutlineTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/SubstepsFileParser.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/SubstepsFileParserTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/StepImplementationLoader.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/Substep.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/SubstepUsage.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/node/factory/SubstepNodeFactory.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/nodes/SubstepUsageTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/nodes/ImplementationSubstepUsageTest.scala" />
       </list>
     </option>
   </component>
@@ -223,13 +341,27 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
       </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="scala-parser" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-3" />
+    <option name="x" value="-2" />
     <option name="y" value="-3" />
-    <option name="width" value="1606" />
-    <option name="height" value="872" />
+    <option name="width" value="1684" />
+    <option name="height" value="1022" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -257,6 +389,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -272,6 +406,92 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Substep-Parsing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Substep-Parsing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="substeps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Substep-Parsing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="substeps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Substep-Parsing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="substeps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="implementations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,7 +539,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="subteps" />
+              <option name="myItemId" value="substeps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -345,7 +565,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="subteps" />
+              <option name="myItemId" value="substeps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Substep-Parsing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="substeps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -375,22 +625,72 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="subteps" />
+              <option name="myItemId" value="substeps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nodes" />
+              <option name="myItemId" value="factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Substep-Parsing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Scenario.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Substep-Parsing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parameter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -403,56 +703,151 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Application.FeatureFileRunner">
-    <configuration default="false" name="Scala Console" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+      <recent name="$PROJECT_DIR$/src/test/scala/com/technophobia/substeps" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ImplementationSubstepUsageTest.testMethodWithAnIntegerArg">
+    <configuration default="false" name="SubstepUsageTest" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="scala-parser" />
-      <setting name="vmparams4" value="-Djline.terminal=NONE" />
-      <setting name="consoleArgs" value="-usejavacp" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.technophobia.substeps.nodes" />
+      <option name="MAIN_CLASS_NAME" value="com.technophobia.substeps.nodes.SubstepUsageTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="FeatureFileRunner" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.technophobia.subteps.FeatureFileRunner" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/src/test/resources/simple.feature" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    <configuration default="false" name="SubstepUsageTest.testResolveStepImplementationAndExecute" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="scala-parser" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.technophobia.substeps.nodes" />
+      <option name="MAIN_CLASS_NAME" value="com.technophobia.substeps.nodes.SubstepUsageTest" />
+      <option name="METHOD_NAME" value="testResolveStepImplementationAndExecute" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="scala-parser" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
       <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ProblemParserRunner" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.technophobia.subteps.ProblemParserRunner" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/src/test/resources/problem.file" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="scala-parser" />
-      <envs />
-      <RunnerSettings RunnerId="Profile ">
-        <option name="myExternalizedOptions" />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ImplementationSubstepUsageTest.testSimpleInvocation" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="scala-parser" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.technophobia.substeps.nodes" />
+      <option name="MAIN_CLASS_NAME" value="com.technophobia.substeps.nodes.ImplementationSubstepUsageTest" />
+      <option name="METHOD_NAME" value="testSimpleInvocation" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ImplementationSubstepUsageTest.testMethodWithAStringArgument" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="scala-parser" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.technophobia.substeps.nodes" />
+      <option name="MAIN_CLASS_NAME" value="com.technophobia.substeps.nodes.ImplementationSubstepUsageTest" />
+      <option name="METHOD_NAME" value="testMethodWithAStringArgument" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ImplementationSubstepUsageTest.testMethodWithAnIntegerArg" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="scala-parser" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.technophobia.substeps.nodes" />
+      <option name="MAIN_CLASS_NAME" value="com.technophobia.substeps.nodes.ImplementationSubstepUsageTest" />
+      <option name="METHOD_NAME" value="testMethodWithAnIntegerArg" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -460,6 +855,28 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
       <method />
     </configuration>
     <configuration default="true" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console">
@@ -475,6 +892,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -502,19 +932,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -551,15 +968,20 @@
       <patterns />
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
-      <item index="1" class="java.lang.String" itemvalue="Application.FeatureFileRunner" />
-      <item index="2" class="java.lang.String" itemvalue="Application.ProblemParserRunner" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.SubstepUsageTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.SubstepUsageTest.testResolveStepImplementationAndExecute" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ImplementationSubstepUsageTest.testSimpleInvocation" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ImplementationSubstepUsageTest.testMethodWithAStringArgument" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ImplementationSubstepUsageTest.testMethodWithAnIntegerArg" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.FeatureFileRunner" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ProblemParserRunner" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ImplementationSubstepUsageTest.testMethodWithAnIntegerArg" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ImplementationSubstepUsageTest.testMethodWithAStringArgument" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ImplementationSubstepUsageTest.testSimpleInvocation" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SubstepUsageTest.testResolveStepImplementationAndExecute" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SubstepUsageTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -598,30 +1020,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="-3" width="1606" height="872" extended-state="6" />
-    <editor active="true" />
+    <frame x="-2" y="-3" width="1684" height="1022" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.49694002" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36225894" sideWeight="0.5032175" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39954337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39954337" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990867" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31849316" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2039897" sideWeight="0.637741" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20930232" sideWeight="0.6826484" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967825" sideWeight="0.637741" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36225894" sideWeight="0.49227798" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20563036" sideWeight="0.6004566" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.249694" sideWeight="0.6004566" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3173516" sideWeight="0.7190943" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.497426" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -651,7 +1073,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -661,6 +1083,10 @@
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
@@ -674,6 +1100,7 @@
     <option name="ACTIVE_VCS_NAME" />
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
@@ -685,103 +1112,141 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Substep.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/nodes/ScenarioOutlineTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="11" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" />
+        <state line="69" column="0" selection-start="1911" selection-end="1911" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#41#86#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple.substeps">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/SubstepsFileParser.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" />
+        <state line="16" column="103" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#35#121#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0.jar!/scala/util/parsing/combinator/RegexParsers.class">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/SubstepsFileParserTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="6" selection-start="44" selection-end="44" vertical-scroll-proportion="0.029880479" />
+        <state line="42" column="0" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#35#74#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0.jar!/scala/Some.class">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/FeatureFileParserTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="17" selection-start="31" selection-end="31" vertical-scroll-proportion="0.029126214" />
+        <state line="36" column="40" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#36#67#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/Substeps">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/Feature.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="71" selection-start="555" selection-end="575" vertical-scroll-proportion="0.0" />
+        <state line="5" column="72" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#41#97#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0.jar!/scala/util/parsing/combinator/Parsers.class">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/Scenario.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="6" selection-start="10767" selection-end="10767" vertical-scroll-proportion="0.35323384">
+        <state line="13" column="79" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#41#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0.jar!/scala/util/matching/Regex.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="269" selection-end="269" vertical-scroll-proportion="0.116959065">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/ProblemParserRunner.scala">
+    <entry file="jar:///usr/lib/jvm/jdk1.7.0_10/src.zip!/java/util/regex/MatchResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
+        <state line="39" column="17" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#6388#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.10.0/scala-library-2.10.0-sources.jar!/scala/util/matching/Regex.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="202" column="67" selection-start="8751" selection-end="8751" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/problem.file">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/StepImplementationLoader.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" />
+        <state line="19" column="0" selection-start="891" selection-end="891" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#35#110#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/SubstepsFileParser.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/nodes/SubstepUsageTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
+        <state line="90" column="0" selection-start="3248" selection-end="3248" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#41#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.7.0_10/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1613" column="18" selection-start="67863" selection-end="67863" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileRunner.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/node/factory/SubstepNodeFactory.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="39" column="0" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#48#146#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/ProblemParser.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/SubstepUsage.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="47" selection-start="277" selection-end="290" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="82" column="3" selection-start="2612" selection-end="2612" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#41#100#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Scenario.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/substeps/nodes/Substep.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="22" column="0" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#41#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/nodes/Feature.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/technophobia/substeps/nodes/ImplementationSubstepUsageTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/AbstractParser.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="29" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/simple.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/technophobia/subteps/FeatureFileParser.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="55" column="0" selection-start="1937" selection-end="1937" vertical-scroll-proportion="0.6462264">
+          <folding>
+            <element signature="e#41#72#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

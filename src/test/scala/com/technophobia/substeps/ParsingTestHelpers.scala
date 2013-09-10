@@ -1,8 +1,6 @@
 package com.technophobia.substeps
 
-import com.technophobia.subteps.nodes.Feature
 import java.io.InputStreamReader
-import com.technophobia.subteps.{AbstractParser, FeatureFileParser}
 
 trait ParsingTestHelpers[T] {
 

@@ -1,7 +1,8 @@
 package com.technophobia.substeps.implementations
 
-import com.technophobia.substeps.model.SubSteps.Step
+import com.technophobia.substeps.model.SubSteps.{StepImplementations, Step}
 
+@StepImplementations
 class DummySteps {
 
   @Step("Assert I am")
