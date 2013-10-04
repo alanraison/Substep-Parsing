@@ -8,7 +8,7 @@ class FeatureFileLexer extends Lexical with SubstepsTokens {
 
   def token: Parser[Token] =
     (  rep1(char) <~ ":" ^^ { case letters => Keyword(letters mkString "")}
-      //|"<" ~> rep(letter) <~ ">"   ^^ { case x => Parameter(x mkstring "") }
+      |"<" ~> rep(char) <~ ">"   ^^ { case x => Parameter(x mkString "") }
       |eol                         ^^ { case _ => NewLine()}
       |rep1(char)                 ^^ { case list => Text(list.mkString(""))}
       |whitespaceParser            ^^ { case _ => WhiteSpace()}
@@ -16,7 +16,7 @@ class FeatureFileLexer extends Lexical with SubstepsTokens {
 
   def eol: Parser[Any]                       = """\r?\n""".r
 
-  def char = chrExcept(':', ' ', '\t')
+  def char = chrExcept(':', ' ', '\t', '\n', '\r', '<', '>')
 
   def whitespaceParser : Parser[Any] = """[ \t]+""".r
 
