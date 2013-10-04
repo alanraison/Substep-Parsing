@@ -5,6 +5,8 @@
     <artifactId>scala-parser</artifactId>
     <packaging>jar</packaging>
     <version>0.1-SNAPSHOT</version>
+
+    <name>Scala Parser</name>
     <repositories>
         <repository>
             <id>scala-tools.org</id>
