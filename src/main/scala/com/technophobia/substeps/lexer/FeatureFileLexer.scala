@@ -7,19 +7,23 @@ import scala.util.parsing.input.CharSequenceReader
 class FeatureFileLexer extends Lexical with SubstepsTokens {
 
   def token: Parser[Token] =
-    (  letter ~ rep(letter) <~ ":" ^^ { case first ~ rest => Keyword(first :: rest mkString "")}
+    (  rep1(char) <~ ":" ^^ { case letters => Keyword(letters mkString "")}
       //|"<" ~> rep(letter) <~ ">"   ^^ { case x => Parameter(x mkstring "") }
       |eol                         ^^ { case _ => NewLine()}
-      |rep(letter)                 ^^ { case list => Text(list.mkString(""))}
+      |rep1(char)                 ^^ { case list => Text(list.mkString(""))}
       |whitespaceParser            ^^ { case _ => WhiteSpace()}
       )
 
   def eol: Parser[Any]                       = """\r?\n""".r
 
+  def char = chrExcept(':', ' ', '\t')
 
   def whitespaceParser : Parser[Any] = """[ \t]+""".r
 
-  override val whitespace: Parser[Any] = failure("whitespace must match explicitly")
+  //override val whitespace: Parser[Any] = failure("whitespace must match explicitly")
+  //override val whitespace: Parser[Any] = """[ \t]+""".r
+
+  override def whitespace = ""
 
   def createScanner(chars: CharSequence, startOffset: Int) = new Scanner(new CharSequenceReader(chars, startOffset))
 
