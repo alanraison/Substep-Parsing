@@ -50,4 +50,5 @@ class FeatureFileParser extends AbstractParser[Feature] {
   private def lineOfCells: Parser[List[String]] = rep(cellSeparator ~> """[^|\n\r ]*(?=([ ]*\|))""".r) <~ cellSeparator
 
   private def cellSeparator: Parser[Any] = opt(whiteSpace) ~ "|" ~ opt(whiteSpace)
+
 }
