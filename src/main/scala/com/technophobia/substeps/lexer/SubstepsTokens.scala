@@ -19,6 +19,11 @@ trait SubstepsTokens extends Tokens {
     override def toString = s"<${chars}>"
   }
 
+  case class Comment(chars: String) extends Token {
+
+    override def toString = s"Comment ${chars}"
+  }
+
   case class NewLine() extends Token {
 
     val chars = "\n"

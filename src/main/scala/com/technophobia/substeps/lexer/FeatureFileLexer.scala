@@ -7,18 +7,22 @@ import scala.util.parsing.input.CharSequenceReader
 class FeatureFileLexer extends Lexical with SubstepsTokens {
 
   def token: Parser[Token] =
-    (  rep1(char) <~ ":" ^^ { case letters => Keyword(letters mkString "")}
-      |"<" ~> rep(char) <~ ">"   ^^ { case x => Parameter(x mkString "") }
-      |eol                         ^^ { case _ => NewLine()}
-      |rep1(char)                 ^^ { case list => Text(list.mkString(""))}
-      |whitespaceParser            ^^ { case _ => WhiteSpace()}
+    (
+       "#" ~> rep(chrExcept('\n', '\r')) ^^ {case line => Comment(line mkString "")}
+      |keyword <~ ":"                    ^^ { case letters => Keyword(letters)}
+      |"<" ~> rep(char) <~ ">"           ^^ { case x => Parameter(x mkString "") }
+      |eol                               ^^ { case _ => NewLine()}
+      |rep1(char)                        ^^ { case list => Text(list.mkString(""))}
+      |whitespaceParser                  ^^ { case _ => WhiteSpace()}
       )
 
   def eol: Parser[Any]                       = """\r?\n""".r
 
-  def char = chrExcept(':', ' ', '\t', '\n', '\r', '<', '>')
+  def char = chrExcept(':', ' ', '\t', '\n', '\r', '<', '>', '#')
 
   def whitespaceParser : Parser[Any] = """[ \t]+""".r
+
+  def keyword : Parser[String] = "Tags" | "Feature" | "Scenario Outline" | "Scenario" | "Examples"
 
   //override val whitespace: Parser[Any] = failure("whitespace must match explicitly")
   //override val whitespace: Parser[Any] = """[ \t]+""".r
