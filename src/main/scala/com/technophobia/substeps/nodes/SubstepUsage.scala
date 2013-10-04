@@ -4,7 +4,7 @@ import com.technophobia.substeps.RunResult.{Failed, NotRun}
 import com.technophobia.substeps.RunResult
 import com.technophobia.substeps.node.factory.SubstepNodeFactory
 import java.util.regex.MatchResult
-import com.technophobia.substeps.model.parameter.Converter
+import com.technophobia.substeps.model.parameter.{StringConverter, DoubleConverter, Converter}
 
 trait SubstepUsage {
 
@@ -79,12 +79,9 @@ object ImplementationSubstepUsage {
   def createFromMatchingSubstep(usageString: String, substep: ImplementationSubstep, matchResult: MatchResult): SubstepUsage = {
 
     val matchedValues : List[String] = (for(groupIdx <- 1 to matchResult.groupCount(); matchedValue = matchResult.group(groupIdx)) yield matchedValue).toList
-    val zipped = matchedValues.zip(substep.converters)
+    val converted: List[AnyRef] = matchedValues.zip(substep.converters).map(a => a._2.convert(a._1).asInstanceOf[AnyRef])
 
-      zipped.map((a, b) => a)
-
-
-    ImplementationSubstepUsage(usageString, (() => substep.invoke(matchedValues:_*))) //TODO conversion
+    ImplementationSubstepUsage(usageString, (() => substep.invoke(converted:_*)))
   }
 
 }

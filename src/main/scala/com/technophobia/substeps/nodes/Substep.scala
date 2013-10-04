@@ -20,7 +20,7 @@ case class FileSubstep(name: String, substepUsages: List[SubstepUsage]) extends 
 
 case class ImplementationSubstep(name: String, stepImplClass: AnyRef, stepImplMethod: Method) extends Substep {
 
-  val converters : List[Converter] = {
+  val converters : List[Converter[_]] = {
 
     val paramTypes = stepImplMethod.getParameterTypes
     val paramAnnotations = stepImplMethod.getParameterAnnotations.map(_.find(_.isInstanceOf[StepParameter]).asInstanceOf[Option[StepParameter]])
@@ -29,8 +29,8 @@ case class ImplementationSubstep(name: String, stepImplClass: AnyRef, stepImplMe
 
       paramAnnotation match {
 
-        case Some(annotation) => annotation.converter().newInstance().asInstanceOf[Converter]
-        case None => ConverterFactory.getConverter(paramType).orElse(throw new RuntimeException("Invalid converter")).asInstanceOf[Converter] //TODO This should be tidier
+        case Some(annotation) => annotation.converter().newInstance().asInstanceOf[Converter[_]]
+        case None => ConverterFactory.getConverter(paramType).getOrElse(throw new RuntimeException("Invalid converter"))
       }
     }
 

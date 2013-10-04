@@ -56,4 +56,39 @@ class ImplementationSubstepUsageTest {
     resolved.asInstanceOf[ImplementationSubstepUsage].invocation()
     Assert.assertEquals(4, integerArg)
   }
+
+  var doubleArg: Double = _
+  def methodWithDoubleArg(arg: Double) = doubleArg = arg
+
+  @Test
+  def testMethodWithAnDoubleArg() {
+
+    SubstepNodeFactory.defineFromSource("Given I have defined a method with an double argument and I pass (.*)", this, classOf[ImplementationSubstepUsageTest].getMethod("methodWithDoubleArg", classOf[Double]))
+
+    val unresolved = UnresolvedSubstepUsage("Given I have defined a method with an double argument and I pass 4.6")
+
+    val resolved = unresolved.resolve()
+
+    Assert.assertNull(doubleArg)
+    resolved.asInstanceOf[ImplementationSubstepUsage].invocation()
+    Assert.assertEquals(4.6, doubleArg, 0)
+  }
+
+  var longArg: Long = _
+  def methodWithLongArg(arg: Long) = longArg = arg
+
+  @Test
+  def testMethodWithAnLongArg() {
+
+    SubstepNodeFactory.defineFromSource("Given I have defined a method with an long argument and I pass (.*)", this, classOf[ImplementationSubstepUsageTest].getMethod("methodWithLongArg", classOf[Long]))
+
+    val unresolved = UnresolvedSubstepUsage("Given I have defined a method with an long argument and I pass 469343345")
+
+    val resolved = unresolved.resolve()
+
+    Assert.assertNull(longArg)
+    resolved.asInstanceOf[ImplementationSubstepUsage].invocation()
+    Assert.assertEquals(469343345, longArg)
+  }
+
 }
