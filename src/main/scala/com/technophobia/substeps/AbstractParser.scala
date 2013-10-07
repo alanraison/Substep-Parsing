@@ -16,7 +16,6 @@ abstract class AbstractParser[T] extends RegexParsers  {
 
   def parse(reader: Reader) = parseAll(entryPoint, reader)
 
-
   def parseOrFail(reader: Reader) : T = {
 
     parse(reader) match {

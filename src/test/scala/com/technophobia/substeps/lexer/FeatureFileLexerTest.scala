@@ -28,7 +28,8 @@ class FeatureFileLexerTest {
     createScanner(SIMPLE_FEATURE_FILE)
     val firstToken = scanner.first
 
-    Assert.assertEquals(classOf[lexer.Keyword], firstToken.getClass)
+    Assert.assertEquals(lexer.TagsToken
+      , firstToken)
     Assert.assertEquals(5, scanner.rest.offset);
     Assert.assertEquals(0, scanner.offset)
 
@@ -36,7 +37,7 @@ class FeatureFileLexerTest {
 
     val secondToken = scanner.first
 
-    Assert.assertEquals(classOf[lexer.WhiteSpace], secondToken.getClass)
+    Assert.assertEquals(lexer.WhiteSpaceToken, secondToken)
     Assert.assertEquals(6, scanner.rest.offset);
     Assert.assertEquals(5, scanner.offset)
 
@@ -44,7 +45,7 @@ class FeatureFileLexerTest {
 
     val thirdToken = scanner.first
 
-    Assert.assertEquals(classOf[lexer.Text], thirdToken.getClass)
+    Assert.assertEquals(classOf[lexer.TextToken], thirdToken.getClass)
     Assert.assertEquals(18, scanner.rest.offset)
     Assert.assertEquals(6, scanner.offset)
 
@@ -56,7 +57,7 @@ class FeatureFileLexerTest {
     createScanner(LEXER_EXAMPLE_FILE)
     val thirdToken = scanner.rest.rest.rest.rest.first
 
-    Assert.assertEquals(classOf[lexer.Parameter], thirdToken.getClass)
+    Assert.assertEquals(classOf[lexer.ParameterToken], thirdToken.getClass)
   }
 
 }

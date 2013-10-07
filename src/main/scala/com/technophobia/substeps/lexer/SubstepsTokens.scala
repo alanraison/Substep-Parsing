@@ -4,33 +4,58 @@ import scala.util.parsing.combinator.token.Tokens
 
 trait SubstepsTokens extends Tokens {
 
-  case class Keyword(chars: String) extends Token {
+  case object FeatureToken extends Token {
 
-    override def toString = s"'${chars}'"
+    val chars = "Feature:"
+    override def toString = chars
   }
 
-  case class Text(chars: String) extends Token {
+  case object ScenarioToken extends Token {
 
-    override def toString = s"text ${chars}"
+    val chars = "Scenario:"
+    override def toString = chars
   }
 
-  case class Parameter(chars: String) extends Token {
+  case object ScenarioOutlineToken extends Token {
+
+    val chars = "ScenarioOutline:"
+    override def toString = chars
+  }
+
+  case object ExamplesToken extends Token {
+
+    val chars = "Examples:"
+    override def toString = chars
+  }
+
+  case object TagsToken extends Token {
+
+    val chars = "Tags:"
+    override def toString = chars
+  }
+
+  case class TextToken(chars: String) extends Token {
+
+    override def toString = s"Text ${chars}"
+  }
+
+  case class ParameterToken(chars: String) extends Token {
 
     override def toString = s"<${chars}>"
   }
 
-  case class Comment(chars: String) extends Token {
+  case class CommentToken(chars: String) extends Token {
 
     override def toString = s"Comment ${chars}"
   }
 
-  case class NewLine() extends Token {
+  case object NewLineToken extends Token {
 
     val chars = "\n"
     override def toString = chars
   }
 
-  case class WhiteSpace() extends Token {
+  case object WhiteSpaceToken extends Token {
 
     val chars = " "
     override def toString = chars

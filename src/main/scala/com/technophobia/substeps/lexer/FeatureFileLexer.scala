@@ -8,21 +8,38 @@ class FeatureFileLexer extends Lexical with SubstepsTokens {
 
   def token: Parser[Token] =
     (
-       "#" ~> rep(chrExcept('\n', '\r')) ^^ {case line => Comment(line mkString "")}
-      |keyword <~ ":"                    ^^ { case letters => Keyword(letters)}
-      |"<" ~> rep(char) <~ ">"           ^^ { case x => Parameter(x mkString "") }
-      |eol                               ^^ { case _ => NewLine()}
-      |rep1(char)                        ^^ { case list => Text(list.mkString(""))}
-      |whitespaceParser                  ^^ { case _ => WhiteSpace()}
+       "#" ~> rep(chrExcept('\n', '\r')) ^^ {case line => CommentToken(line mkString "")}
+      |keyword
+      |"<" ~> rep(char) <~ ">"           ^^ { case x => ParameterToken(x mkString "") }
+      |eol                               ^^ { case _ => NewLineToken}
+      |rep1(char)                        ^^ { case list => TextToken(list.mkString(""))}
+      |whitespaceParser                  ^^ { case _ => WhiteSpaceToken}
       )
 
   def eol: Parser[Any]                       = """\r?\n""".r
 
-  def char = chrExcept(':', ' ', '\t', '\n', '\r', '<', '>', '#')
+  def char = chrExcept(':', ' ', '\t', '\n', '\r', '<', '>', '#', '|')
 
   def whitespaceParser : Parser[Any] = """[ \t]+""".r
 
-  def keyword : Parser[String] = "Tags" | "Feature" | "Scenario Outline" | "Scenario" | "Examples"
+  def keyword : Parser[Token] = new Parser[Token] {
+
+    def apply(in: Input) = {
+
+      val source = in.source
+      val offset = in.offset
+      val toMatch = source.subSequence(offset, source.length).toString
+      val keywordTokens = List(TagsToken, ScenarioToken, ScenarioOutlineToken, ExamplesToken)
+      val matchingPair = keywordTokens.zip(keywordTokens.map(_.chars)).find(a => toMatch.startsWith(a._2))
+
+      matchingPair match {
+
+        case Some((token, chars)) => Success(token, in.drop(chars.length))
+        case None                 => Failure("Keyword expected", in)
+
+      }
+    }
+  }
 
   //override val whitespace: Parser[Any] = failure("whitespace must match explicitly")
   //override val whitespace: Parser[Any] = """[ \t]+""".r
