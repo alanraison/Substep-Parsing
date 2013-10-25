@@ -29,7 +29,7 @@ class FeatureFileLexer extends Lexical with SubstepsTokens {
       val source = in.source
       val offset = in.offset
       val toMatch = source.subSequence(offset, source.length).toString
-      val keywordTokens = List(TagsToken, ScenarioToken, ScenarioOutlineToken, ExamplesToken)
+      val keywordTokens = List(TagsToken, ScenarioToken, ScenarioOutlineToken, ExamplesToken, FeatureToken)
       val matchingPair = keywordTokens.zip(keywordTokens.map(_.chars)).find(a => toMatch.startsWith(a._2))
 
       matchingPair match {
