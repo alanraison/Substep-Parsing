@@ -23,7 +23,7 @@ class ScenarioOutlineTest {
     Mockito.when(basicScenarioOne.run(tags)).thenReturn(Passed)
     Mockito.when(basicScenarioTwo.run(tags)).thenReturn(Passed)
 
-    val scenarioOutline = ScenarioOutline("A scenario outline", List(basicScenarioOne, basicScenarioTwo))
+    val scenarioOutline = ScenarioOutline("A scenario outline", List(), List(basicScenarioOne, basicScenarioTwo))
 
     val passed = scenarioOutline.run(tags)
 
@@ -41,7 +41,7 @@ class ScenarioOutlineTest {
     Mockito.when(basicScenarioOne.run(tags)).thenReturn(failure)
     Mockito.when(basicScenarioTwo.run(tags)).thenReturn(Passed)
 
-    val scenarioOutline = ScenarioOutline("A scenario outline", List(basicScenarioOne, basicScenarioTwo))
+    val scenarioOutline = ScenarioOutline("A scenario outline", List(), List(basicScenarioOne, basicScenarioTwo))
     val passed = scenarioOutline.run(tags)
 
     Assert.assertEquals(failure, passed)
@@ -57,7 +57,7 @@ class ScenarioOutlineTest {
     Mockito.when(basicScenarioOne.run(tags)).thenReturn(Passed)
     Mockito.when(basicScenarioTwo.run(tags)).thenReturn(failure)
 
-    val scenarioOutline = ScenarioOutline("A scenario outline", List(basicScenarioOne, basicScenarioTwo))
+    val scenarioOutline = ScenarioOutline("A scenario outline", List(), List(basicScenarioOne, basicScenarioTwo))
     val passed = scenarioOutline.run(tags)
 
     Assert.assertEquals(failure, passed)

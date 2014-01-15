@@ -48,6 +48,14 @@ class FeatureFileParserTest extends FeatureFileParser with ParsingTestHelpers[Fe
 
       Assert.assertEquals("A scenario that's an outline", scenarioOutline.name)
 
+      /* Check steps without examples */
+      Assert.assertEquals(3, scenarioOutline.steps.size)
+
+      Assert.assertEquals("Given I think for <SECONDS>", scenarioOutline.steps(0).usageString)
+      Assert.assertEquals("Then I am <TIREDNESS_LEVEL>", scenarioOutline.steps(1).usageString)
+      Assert.assertEquals("So <SECONDS> means I'll be <TIREDNESS_LEVEL>", scenarioOutline.steps(2).usageString)
+
+      /* Check with populated parameters */
       Assert.assertEquals(2, scenarioOutline.scenarios.size)
 
       val firstExampleScenario = scenarioOutline.scenarios(0)

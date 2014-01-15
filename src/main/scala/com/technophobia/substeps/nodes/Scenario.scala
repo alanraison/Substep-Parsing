@@ -23,7 +23,7 @@ case class BasicScenario(name: String, tags: List[String], steps: List[SubstepUs
   }
 }
 
-case class ScenarioOutline(name: String, scenarios: List[BasicScenario]) extends Scenario {
+case class ScenarioOutline(name: String, steps: List[SubstepUsage], scenarios: List[BasicScenario]) extends Scenario {
 
   def run(runWith: List[String]) = scenarios.foldLeft[RunResult](NotRun)((previous, scenario) =>  previous.combine(scenario.run(runWith)))
 }
@@ -34,7 +34,7 @@ object ScenarioOutline {
 
     val basicScenarios = for((example, idx) <- examples.zip(Stream.from(1)); stepsForExample = steps.map(_.applyParameters(example))) yield BasicScenario(s"$name-$idx", tags, stepsForExample)
 
-    ScenarioOutline(name, basicScenarios)
+    ScenarioOutline(name, steps, basicScenarios)
   }
 
 }
